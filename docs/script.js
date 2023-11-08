@@ -1,23 +1,22 @@
-let jmenoFetaka = window.prompt('Wassup feťáku, jak se jmenuješ?');
-console.log('Tvé jméno je ' + jmenoFetaka + '.');
-window.alert('Zdravím tě ' + jmenoFetaka + '.');
+const MINIMUM = 5;
+const MINIMALNI_VEK = 18; // Přidej minimální věk zde
+
+let jmenoFetaka = window.prompt('Wassup feťáku, jaké je tvoje jméno?');
+console.log(`Tvé jméno je ${jmenoFetaka}.`);
+window.alert(`Zdravím tě ${jmenoFetaka}.`);
+
+let vekFetaka = parseInt(window.prompt('Kolik ti je let?')); // Změnil jsem načítání věku a převedení na číslo
+console.log(`Tvého věku je ${vekFetaka}.`);
 
 let mnozstviFetu = window.prompt('Kolik toho u sebe máš?');
 console.log(`Tvé množství fetu je ${mnozstviFetu}.`);
 
-const MINIMUM = 5;
-
-if (mnozstviFetu === MINIMUM) {
+if (vekFetaka < MINIMALNI_VEK) {
+    window.alert('Omlouváme se, ale jsi příliš mladý na tuto konverzaci.');
+} else if (mnozstviFetu == MINIMUM) {
     window.alert('Vítej mezi námi!');
-}
-
-else if (mnozstviFetu > MINIMUM) {
-    window.alert('Proč jis nepřišel dřív?!');
-}
-
-else {
+} else if (mnozstviFetu > MINIMUM) {
+    window.alert('Proč jsi nepřišel dřív?!');
+} else {
     window.alert('To je málo, budeš se muset víc snažit!');
 }
-
-
-
